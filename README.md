@@ -1,4 +1,4 @@
-# [LogValid API: Precision Email Verification for Newsletters](https://logvalid.com/)
+# [LogValid API: Precision Email Verification](https://logvalid.com/)
 
 
 **LogValid API** enables developers to verify emails with 99% accuracy, safeguarding newsletter campaigns and ensuring clean subscriber data. Integrate effortlessly to block spam and optimize engagement.
