@@ -32,17 +32,15 @@ LogValid API offers six specialized endpoints to meet your email verification ne
 
 ## Quick Start Example (JavaScript)
 ```javascript
-const axios = require('axios');
+//Get your LogValid API key from the **Management** page
+const url = 'https://api.logvalid.com/verify?email=user@example.com&key=YOUR_API_KEY';
 
-const url = 'https://api.logvalid.com/verify';
-const params = {
-  email: 'user@example.com',
-  key: 'YOUR_API_KEY'
-};
-
-axios.post(url, params)
-  .then(response => console.log(response.data))
-  .catch(error => console.error(error));
+fetch(url, {
+  method: 'POST'
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
 ```
 
 ## Pricing
