@@ -38,25 +38,18 @@
 4. Check code samples in [examples/](examples/) (Python, Rust, Kotlin, etc.).
 5. Test on [Postman](https://www.postman.com/hashemdev/logvalid/collection/z1rhdij/logvalid-email-verification-api?action=share&creator=16638588) or [RapidAPI](https://rapidapi.com/hashemdev94-rrzDG4laatO/api/logvalid-next-gen-email-verification).
 
-## Example (Rust)
-```rust
-use std::io::{Read, Write};
-use std::net::TcpStream;
+## Quick Start Example (JavaScript)
+```javaScript
 
-fn main() -> std::io::Result<()> {
-    let host = "api.logvalid.com";
-    let path = "/verify?email=user@example.com&key=YOUR_API_KEY";
-    let request = format!(
-        "POST {} HTTP/1.1\r\nHost: {}\r\nConnection: close\r\nContent-Length: 0\r\n\r\n",
-        path, host
-    );
-    let mut stream = TcpStream::connect(format!("{}:443", host))?;
-    stream.write_all(request.as_bytes())?;
-    let mut response = String::new();
-    stream.read_to_string(&mut response)?;
-    println!("{}", response);
-    Ok(())
-}
+//Get your LogValid API key from the Management page
+const url = 'https://api.logvalid.com/verify?email=user@example.com&key=YOUR_API_KEY';
+
+fetch(url, {
+  method: 'POST'
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
 ```
 
 ## Pricing
