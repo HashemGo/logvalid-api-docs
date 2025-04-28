@@ -287,6 +287,6 @@ axios.post(url, params)
   - `/register`: 0.1 Credit
 
 ## Code Examples
-Find ready-to-use code samples in the [examples/](../examples/) directory, organized by programming language.
+Find ready-to-use code samples in the [examples](../examples/) directory, organized by programming language.
 
 [Sign up for free](https://logvalid.com) | [Back to README](../README.md)
