@@ -1,50 +1,66 @@
- # LogValid API: Real-Time Email Verification
+# [LogValid API: Precision Email Verification for Newsletters](https://logvalid.com/)
 
-Welcome to **LogValid API**, a powerful tool designed for developers to validate email addresses with unmatched precision (99% accuracy). Protect your applications from spam, fake signups, and bounced emails with our easy-to-use, real-time verification endpoints.
+
+**LogValid API** enables developers to verify emails with 99% accuracy, safeguarding newsletter campaigns and ensuring clean subscriber data. Integrate effortlessly to block spam and optimize engagement.
 
 ## Key Features
-- **Instant Email Checks**: Validate email formats, deliverability, DNS/MX records, and more in milliseconds.
-- **AI-Driven Protection**: Identify temporary or suspicious emails with cutting-edge spam analysis.
-- **Developer-Friendly**: Integrate effortlessly with simple POST requests and clear documentation.
-- **Cost-Effective**: Kick off with 500 free credits; pay only for what you use (0.1–4 credits per request).
-- **Rich Reporting**: Access detailed validation reports to make informed decisions.
-
-## API Endpoints
-LogValid API offers six specialized endpoints to meet your email verification needs:
-1. **/verify**: Comprehensive validation (format, delivery, AI, DNS/MX, registration).
-2. **/format**: Ensure email format meets international standards.
-3. **/delivery**: Confirm if an email can receive messages.
-4. **/dnsmx**: Verify domain DNS and MX records.
-5. **/ai**: Detect risky or temporary email domains using AI.
-6. **/register**: Finalize user registration after validation.
+- **Newsletter Form Defense**: Protect signup forms with a lightweight JS snippet to stop spam instantly:
+  ```html
+  <script id="LogValid-Script" src="https://app.logvalid.com/Host/Setup-LogValid.js?v=1.27" webKey="YOUR_WEB_KEY" formKey="YOUR_PUBLIC_FORM_KEY"></script>
+  ```
+- **Real-Time Email Checks**: Validate subscriber emails instantly to maintain high deliverability.
+- **Actionable Form Insights**: Monitor signups with daily analytics via LogValid’s dashboard.
+- **Email Discovery Tool**: Find valid emails from websites or companies for newsletter growth.
+- **AI Spam Blocking**: Filter out risky or temporary emails with intelligent detection.
+- **Developer-Friendly Integration**: Use simple POST requests with code in 10+ languages.
+- **Budget-Friendly Plans**: Start with 500 free credits; pay-as-you-go (0.1–4 credits/request).
 
 ## Use Cases
-- Secure website registration forms against fake accounts.
-- Optimize email marketing campaigns with clean, deliverable lists.
-- Enhance user onboarding with real-time email validation.
+- **Block Newsletter Spam**: Stop fake signups to keep subscriber lists genuine.
+- **Boost Email Campaign ROI**: Validate lists for better engagement and lower bounces.
+- **Seamless User Registration**: Verify emails during signup for secure onboarding.
+- **Expand Newsletter Reach**: Discover emails for targeted marketing with Email Finder.
+- **Ensure Subscriber Data Quality**: Use Email Validator for accurate, active emails.
+- **Optimize Signup Strategies**: Track form performance with daily analytics.
+
+## API Endpoints
+1. **/verify**: Full validation (format, delivery, AI, DNS/MX, registration).
+2. **/format**: Check email syntax.
+3. **/delivery**: Confirm deliverability.
+4. **/dnsmx**: Verify DNS/MX records.
+5. **/ai**: Flag suspicious emails.
+6. **/register**: Complete registrations.
 
 ## Get Started
-1. [Create a free account](https://logvalid.com) to receive your API key and 500 credits.
-2. Get your LogValid API key from the [Management](https://app.logvalid.com/Management) page
-3. Read the [API Documentation](docs/api.md) for endpoint details and examples.
-4. Explore code samples in [examples](examples/) for Python, JavaScript, C#, and more.
-5. Test the API using our [Postman Collection](https://www.postman.com/hashemdev/logvalid/collection/z1rhdij/logvalid-email-verification-api?action=share&creator=16638588) - [Postman Documentation](https://documenter.getpostman.com/view/16638588/2sB2j1hCqE).
+1. [Sign up](https://logvalid.com) for a free API key (500 credits).
+2. Get your key from [Management](https://app.logvalid.com/Management).
+3. Explore [API Documentation](docs/api.md).
+4. Check code samples in [examples/](examples/) (Python, Rust, Kotlin, etc.).
+5. Test on [Postman](https://www.postman.com/hashemdev/logvalid/collection/z1rhdij/logvalid-email-verification-api?action=share&creator=16638588) or [RapidAPI](https://rapidapi.com/hashemdev94-rrzDG4laatO/api/logvalid-next-gen-email-verification).
 
-## Quick Start Example (JavaScript)
-```javascript
-//Get your LogValid API key from the Management page
-const url = 'https://api.logvalid.com/verify?email=user@example.com&key=YOUR_API_KEY';
+## Example (Rust)
+```rust
+use std::io::{Read, Write};
+use std::net::TcpStream;
 
-fetch(url, {
-  method: 'POST'
-})
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
+fn main() -> std::io::Result<()> {
+    let host = "api.logvalid.com";
+    let path = "/verify?email=user@example.com&key=YOUR_API_KEY";
+    let request = format!(
+        "POST {} HTTP/1.1\r\nHost: {}\r\nConnection: close\r\nContent-Length: 0\r\n\r\n",
+        path, host
+    );
+    let mut stream = TcpStream::connect(format!("{}:443", host))?;
+    stream.write_all(request.as_bytes())?;
+    let mut response = String::new();
+    stream.read_to_string(&mut response)?;
+    println!("{}", response);
+    Ok(())
+}
 ```
 
 ## Pricing
-- **Free Plan**: 500 credits to get started (no credit card needed).
+- **Free**: 500 credits.
 - **Pay-as-you-go**:
   - `/verify`: ~4 Credits
   - `/format`: 0.1 Credit
@@ -52,13 +68,13 @@ fetch(url, {
   - `/dnsmx`: 1 Credit
   - `/ai`: 2 Credits
   - `/register`: 0.1 Credit
-  
-Scale effortlessly with affordable plans starting at 2,000 credits for just $1.
 
 ## Resources
-- [Full Documentation](docs/api.md)
+- [Documentation](docs/api.md)
 - [Code Examples](examples/)
 - [Postman Collection](https://www.postman.com/hashemdev/logvalid/collection/z1rhdij/logvalid-email-verification-api?action=share&creator=16638588)
+- [Postman Docs](https://documenter.getpostman.com/view/16638588/2sB2j1hCqE)
+- [RapidAPI](https://rapidapi.com/hashemdev94-rrzDG4laatO/api/logvalid-next-gen-email-verification)
 - [Support](https://logvalid.com/contact)
 
-Start validating emails today with LogValid API! [Sign up now](https://logvalid.com).
+Power your newsletters with LogValid API! [Sign up now](https://logvalid.com).
