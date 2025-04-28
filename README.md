@@ -1,4 +1,4 @@
-# LogValid API: Real-Time Email Verification
+ # LogValid API: Real-Time Email Verification
 
 Welcome to **LogValid API**, a powerful tool designed for developers to validate email addresses with unmatched precision (99% accuracy). Protect your applications from spam, fake signups, and bounced emails with our easy-to-use, real-time verification endpoints.
 
@@ -32,7 +32,7 @@ LogValid API offers six specialized endpoints to meet your email verification ne
 
 ## Quick Start Example (JavaScript)
 ```javascript
-//Get your LogValid API key from the **Management** page
+//Get your LogValid API key from the Management page
 const url = 'https://api.logvalid.com/verify?email=user@example.com&key=YOUR_API_KEY';
 
 fetch(url, {
