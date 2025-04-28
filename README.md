@@ -57,7 +57,7 @@ axios.post(url, params)
 ## Resources
 - [Full Documentation](docs/api.md)
 - [Code Examples](examples/)
-- [Postman Collection](YOUR_POSTMAN_COLLECTION_URL)
-- [Support](https://logvalid.com/support)
+- [Postman Collection](https://www.postman.com/hashemdev/logvalid/collection/z1rhdij/logvalid-email-verification-api?action=share&creator=16638588)
+- [Support](https://logvalid.com/contact)
 
 Start validating emails today with LogValid API! [Sign up now](https://logvalid.com).
