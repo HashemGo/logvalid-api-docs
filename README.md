@@ -61,6 +61,9 @@ fetch(url, {
   - `/dnsmx`: 1 Credit
   - `/ai`: 2 Credits
   - `/register`: 0.1 Credit
+  
+Scale effortlessly with affordable plans starting at 2,000 credits for just $1.
+
 
 ## Resources
 - [Documentation](docs/api.md)
