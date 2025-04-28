@@ -25,9 +25,10 @@ LogValid API offers six specialized endpoints to meet your email verification ne
 
 ## Get Started
 1. [Create a free account](https://logvalid.com) to receive your API key and 500 credits.
-2. Read the [API Documentation](docs/api.md) for endpoint details and examples.
-3. Explore code samples in [examples/](examples/) for Python, JavaScript, C#, and more.
-4. Test the API using our [Postman Collection](YOUR_POSTMAN_COLLECTION_URL).
+2. Get your LogValid API key from the [Management](https://app.logvalid.com/Management) page
+3. Read the [API Documentation](docs/api.md) for endpoint details and examples.
+4. Explore code samples in [examples](examples/) for Python, JavaScript, C#, and more.
+5. Test the API using our [Postman Collection](https://www.postman.com/hashemdev/logvalid/collection/z1rhdij/logvalid-email-verification-api?action=share&creator=16638588).
 
 ## Quick Start Example (JavaScript)
 ```javascript
