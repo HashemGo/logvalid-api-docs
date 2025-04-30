@@ -6,7 +6,7 @@
 ## Key Features
 - **Newsletter Form Defense**: Protect signup forms with a lightweight JS snippet to stop spam instantly:
   ```html
-  <script id="LogValid-Script" src="https://app.logvalid.com/Host/Setup-LogValid.js?v=1.27" webKey="YOUR_WEB_KEY" formKey="YOUR_PUBLIC_FORM_KEY"></script>
+  <script id="LogValid-Script" src="https://logvalid.com/Host/Setup-LogValid.js?v=1.27" webKey="YOUR_WEB_KEY" formKey="YOUR_PUBLIC_FORM_KEY"></script>
   ```
 - **Real-Time Email Checks**: Validate subscriber emails instantly to maintain high deliverability.
 - **Actionable Form Insights**: Monitor signups with daily analytics via LogValid’s dashboard.
